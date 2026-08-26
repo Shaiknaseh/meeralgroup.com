@@ -2,4 +2,18 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bekcgiqucf/meeralgroup.com/
-    - /bin/cp -R ./* $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp 404.html $DEPLOYPATH
+    - /bin/cp course-detail.html $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp -R about $DEPLOYPATH
+    - /bin/cp -R accreditations $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R contact $DEPLOYPATH
+    - /bin/cp -R corporate-training $DEPLOYPATH
+    - /bin/cp -R courses $DEPLOYPATH
+    - /bin/cp -R gallery $DEPLOYPATH
+    - /bin/cp -R profile $DEPLOYPATH
+    - /bin/cp -R services $DEPLOYPATH
+    - /bin/cp -R verification $DEPLOYPATH
