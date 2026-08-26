@@ -1,0 +1,1 @@
+Navigation and asset paths updated to work on both https://meeralgroup.com/ and https://shaiknaseh.github.io/meeralgroup.com/.
