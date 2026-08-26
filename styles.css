@@ -419,63 +419,53 @@ nav a{
 .reference-contact-btn.active{background:var(--green)!important;border-color:var(--green)!important;color:#fff!important;}
 @media(max-width:980px){.reference-header .nav-dropdown-toggle.active:after{display:none}}
 
-/* ===== Internal Pages Background Fix ===== */
+/* =========================================
+   LIGHT GREEN SELECTED INTERNAL PAGES
+   Services / Accreditations / Gallery
+   Verification / Profile
+   ========================================= */
 
-body {
-    background: #ffffff;
+body.light-green-page {
+    background: #eef9f7 !important;
 }
 
-/* Light page background for internal pages */
-.page-main,
-.inner-page,
-.services-page,
-.accreditations-page,
-.gallery-page,
-.verification-page,
-.profile-page {
-    background: #ffffff;
+body.light-green-page main {
+    background: #eef9f7 !important;
 }
 
-/* Hero / title area */
-.page-hero,
-.inner-hero,
-.services-hero,
-.accreditations-hero,
-.gallery-hero,
-.verification-hero,
-.profile-hero {
-    background: linear-gradient(135deg, #f5fbfd 0%, #eaf7fb 100%);
+/* Standard internal sections */
+body.light-green-page .section,
+body.light-green-page .section-sm,
+body.light-green-page .page-content,
+body.light-green-page .content-section,
+body.light-green-page .page-section {
+    background: #eef9f7 !important;
 }
 
-/* Main content sections */
-.page-section,
-.services-section,
-.accreditations-section,
-.gallery-section,
-.verification-section,
-.profile-section {
-    background: #ffffff;
+/* Services page sections */
+body.light-green-page .svc-stats,
+body.light-green-page .svc-section,
+body.light-green-page .svc-corporate,
+body.light-green-page .svc-impact,
+body.light-green-page .svc-contact {
+    background: #eef9f7 !important;
 }
 
-/* Alternate light section */
-.section-light {
-    background: #f6fbfd;
-}
-/* ===== INTERNAL PAGE LIGHT GREEN BACKGROUND ===== */
-
-/* Overall page background */
-body {
-    background-color: #eef9f7;
+/* Keep hero areas unchanged */
+body.light-green-page .svc-hero,
+body.light-green-page .page-hero,
+body.light-green-page .reference-page-hero {
+    /* keep original hero styles */
 }
 
-/* Main content background */
-main {
-    background-color: #eef9f7;
-}
-
-/* Normal content areas only */
-.page-content,
-.content-section,
-.page-section {
-    background-color: #eef9f7 !important;
+/* Keep cards and content boxes white */
+body.light-green-page .svc-card,
+body.light-green-page .svc-benefit,
+body.light-green-page .svc-contact-box,
+body.light-green-page .reference-info-card,
+body.light-green-page .gallery-grid figure,
+body.light-green-page .verification-card,
+body.light-green-page .profile-points div,
+body.light-green-page .course-card {
+    background: #ffffff !important;
 }
