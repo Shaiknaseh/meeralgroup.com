@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bekcgiqucf/meeralgroup.com/
+    - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp 404.html $DEPLOYPATH
     - /bin/cp course-detail.html $DEPLOYPATH
