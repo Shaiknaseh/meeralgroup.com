@@ -461,3 +461,21 @@ body {
 .section-light {
     background: #f6fbfd;
 }
+/* ===== INTERNAL PAGE LIGHT GREEN BACKGROUND ===== */
+
+/* Overall page background */
+body {
+    background-color: #eef9f7;
+}
+
+/* Main content background */
+main {
+    background-color: #eef9f7;
+}
+
+/* Normal content areas only */
+.page-content,
+.content-section,
+.page-section {
+    background-color: #eef9f7 !important;
+}
