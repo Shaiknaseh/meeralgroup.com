@@ -556,3 +556,131 @@ body.light-green-page .course-card {
     max-height:56px !important;
   }
 }
+
+
+/* ===== SPLIT MEERAL BRAND + GLOBAL SOCIAL / WHATSAPP FIX ===== */
+.brand-split{
+  display:flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  text-decoration:none !important;
+  flex:0 0 auto !important;
+}
+.brand-split .brand-mark{
+  display:block !important;
+  width:50px !important;
+  height:58px !important;
+  max-width:none !important;
+  object-fit:contain !important;
+}
+.brand-split .brand-wordmark{
+  display:block !important;
+  width:166px !important;
+  height:auto !important;
+  max-width:none !important;
+  object-fit:contain !important;
+}
+.footer .brand-split .brand-mark{width:46px !important;height:54px !important}
+.footer .brand-split .brand-wordmark{width:175px !important}
+
+.global-social-rail{
+  position:fixed;
+  right:18px;
+  top:48%;
+  transform:translateY(-50%);
+  z-index:49;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  filter:drop-shadow(0 9px 16px rgba(0,0,0,.12));
+}
+.global-social-mark{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  border-radius:12px;
+  margin-bottom:6px;
+  box-shadow:0 6px 18px rgba(0,0,0,.10);
+  overflow:hidden;
+}
+.global-social-mark img{
+  width:36px !important;
+  height:36px !important;
+  object-fit:contain !important;
+}
+.global-social-label{
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  background:#07506b;
+  color:#fff;
+  padding:13px 8px;
+  border-radius:9px 9px 0 0;
+  font-size:9px;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:3px;
+}
+.global-social-icons{
+  background:#fff;
+  border-radius:13px;
+  padding:8px;
+  display:grid;
+  gap:8px;
+}
+.global-social-icons a{
+  width:37px;
+  height:37px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  text-decoration:none;
+}
+.global-social-icons .ig{background:#d42972}
+.global-social-icons .fb{background:#1877f2}
+.global-social-icons .li{background:#0a66c2}
+.global-social-icons .wa{background:#25d366}
+.global-social-icons .wa svg{width:21px;height:21px;display:block}
+
+.whatsapp{
+  position:fixed !important;
+  right:22px !important;
+  bottom:22px !important;
+  width:56px !important;
+  height:56px !important;
+  border-radius:50% !important;
+  background:#25D366 !important;
+  color:#fff !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:0 !important;
+  text-decoration:none !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.18) !important;
+  z-index:50 !important;
+}
+.whatsapp svg{
+  width:30px !important;
+  height:30px !important;
+  display:block !important;
+}
+.whatsapp:hover{transform:translateY(-2px) scale(1.04)}
+
+@media(max-width:1160px){
+  .brand-split .brand-mark{width:42px !important;height:50px !important}
+  .brand-split .brand-wordmark{width:145px !important}
+}
+@media(max-width:980px){
+  .global-social-rail{display:none}
+  .brand-split{gap:7px !important}
+  .brand-split .brand-mark{width:40px !important;height:46px !important}
+  .brand-split .brand-wordmark{width:142px !important}
+}
+@media(max-width:640px){
+  .brand-split .brand-mark{width:34px !important;height:40px !important}
+  .brand-split .brand-wordmark{width:124px !important}
+}
