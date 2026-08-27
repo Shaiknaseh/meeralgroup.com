@@ -1,0 +1,15 @@
+MEERAL VERIFICATION RECORDS
+
+Edit: verification/index.html
+Find: const verificationRecords = [...]
+
+Add one object per issued card/certificate with:
+id, name, program, issueDate, expiryDate, status, issuer, qr
+
+Recommended verification URL:
+https://meeralgroup.com/verification/?id=YOUR-UNIQUE-ID
+
+Sample ID:
+MGIPE-2026-00125
+
+Replace the sample trainee data before public launch.
