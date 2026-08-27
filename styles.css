@@ -490,3 +490,69 @@ body.light-green-page .course-card {
 @media(max-width:700px){.vendor-global{padding:34px 0 42px}.vendor-global-item{width:170px;height:88px;padding:10px 14px}.vendor-global-item img{max-width:140px;max-height:58px}.vendor-global-track{gap:12px;animation-duration:34s}.vendor-global-marquee:before,.vendor-global-marquee:after{width:42px}}
 @media(prefers-reduced-motion:reduce){.vendor-global-track{animation:none}}
 
+
+
+/* ===== FINAL GLOBAL BRAND + VENDOR CONSISTENCY FIX ===== */
+.reference-header .brand-logo img,
+.site-header .brand-logo img{
+  width:auto !important;
+  height:68px !important;
+  max-width:220px !important;
+  object-fit:contain !important;
+}
+.vendor-global{
+  width:100% !important;
+  overflow:hidden !important;
+  background:#eef9f7 !important;
+  padding:42px 0 50px !important;
+}
+.vendor-global-marquee{
+  position:relative !important;
+  overflow:hidden !important;
+  width:100% !important;
+}
+.vendor-global-track{
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  width:max-content !important;
+  gap:18px !important;
+  animation:vendorGlobalScroll 42s linear infinite !important;
+}
+.vendor-global-item{
+  flex:0 0 210px !important;
+  width:210px !important;
+  height:105px !important;
+  padding:12px 18px !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  border:1px solid #dfeae5 !important;
+  border-radius:12px !important;
+}
+.vendor-global-item img{
+  display:block !important;
+  max-width:174px !important;
+  max-height:72px !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+}
+@media(max-width:700px){
+  .reference-header .brand-logo img,
+  .site-header .brand-logo img{
+    height:54px !important;
+    max-width:175px !important;
+  }
+  .vendor-global-item{
+    flex-basis:165px !important;
+    width:165px !important;
+    height:86px !important;
+  }
+  .vendor-global-item img{
+    max-width:135px !important;
+    max-height:56px !important;
+  }
+}

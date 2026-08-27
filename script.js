@@ -7,7 +7,6 @@ const courses = [
  {title:'IOSH Managing Safely',category:'HSE & Safety',method:'Classroom / Online',language:'Arabic / English',duration:'3 Days',image:'assets/images/safety.jpg'},
  {title:'First Aid & CPR',category:'First Aid & Emergency',method:'Classroom',language:'Arabic / English',duration:'2 Days',image:'assets/images/first-aid.webp'},
  {title:'Fire Safety & Prevention',category:'Fire & Safety',method:'Classroom',language:'Arabic / English',duration:'2 Days',image:'assets/images/safety.jpg'},
- {title:'NEBOSH International General Certificate',category:'HSE & Safety',method:'Classroom / Online',language:'English',duration:'10 Days',image:'assets/images/safety.jpg'},
  {title:'Risk Assessment & Risk Management',category:'HSE & Safety',method:'Classroom / Online',language:'Arabic / English',duration:'3 Days',image:'assets/images/safety.jpg'},
  {title:'PMP® Exam Preparation',category:'Professional Certifications',method:'Classroom / Online',language:'Arabic / English',duration:'5 Days',image:'assets/images/corporate.jpg'},
  {title:'Microsoft Power BI Data Analysis',category:'IT & Digital Skills',method:'Classroom / Online',language:'Arabic / English',duration:'4 Days',image:'assets/images/corporate.jpg'},
@@ -103,11 +102,27 @@ function setActiveNavigation(){
   if(contactBtn)contactBtn.classList.toggle('active',section==='contact');
 }
 
+
+function applyCourseCategoryFromUrl(){
+  const params=new URLSearchParams(window.location.search);
+  const requested=params.get('category');
+  if(!requested)return false;
+  const categorySelect=document.querySelector('#categorySelect');
+  if(categorySelect && [...categorySelect.options].some(o=>o.value===requested)){
+    categorySelect.value=requested;
+  }
+  document.querySelectorAll('.filter-list button').forEach(btn=>{
+    btn.classList.toggle('active',btn.dataset.category===requested);
+  });
+  applyFilters();
+  return true;
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
   setActiveNavigation();
   initHeroSlider();
   document.querySelector('.menu-btn')?.addEventListener('click',()=>document.querySelector('.main-nav')?.classList.toggle('open')); document.querySelectorAll('.main-nav > a, .nav-dropdown-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.main-nav')?.classList.remove('open')));
-  renderCourses();
+  if(!applyCourseCategoryFromUrl()) renderCourses();
   document.querySelectorAll('.filter-list button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter-list button').forEach(x=>x.classList.remove('active'));b.classList.add('active');applyFilters()}));
   ['courseSearch','categorySelect','methodSelect','languageSelect'].forEach(id=>document.querySelector('#'+id)?.addEventListener('input',applyFilters));
   document.querySelector('#searchBtn')?.addEventListener('click',applyFilters);
