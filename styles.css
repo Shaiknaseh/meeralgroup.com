@@ -469,3 +469,24 @@ body.light-green-page .profile-points div,
 body.light-green-page .course-card {
     background: #ffffff !important;
 }
+
+
+
+/* ===== MEERAL GLOBAL VENDOR LOGO MARQUEE ===== */
+.vendor-global{background:#eef9f7;padding:46px 0 54px;overflow:hidden}
+.vendor-global-head{text-align:center;margin:0 auto 26px}
+.vendor-global-head span{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#08a34a;margin-bottom:8px}
+.vendor-global-head h2{margin:0;color:#17354a;font-size:clamp(24px,3vw,34px);letter-spacing:-.6px}
+.vendor-global-marquee{position:relative;overflow:hidden;width:100%;padding:5px 0}
+.vendor-global-marquee:before,.vendor-global-marquee:after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:3;pointer-events:none}
+.vendor-global-marquee:before{left:0;background:linear-gradient(90deg,#eef9f7,rgba(238,249,247,0))}
+.vendor-global-marquee:after{right:0;background:linear-gradient(270deg,#eef9f7,rgba(238,249,247,0))}
+.vendor-global-track{display:flex;width:max-content;gap:18px;animation:vendorGlobalScroll 42s linear infinite}
+.vendor-global-marquee:hover .vendor-global-track{animation-play-state:paused}
+.vendor-global-item{width:210px;height:105px;padding:12px 18px;background:#fff;border:1px solid #dfeae5;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(22,53,74,.055);transition:.22s ease}
+.vendor-global-item:hover{border-color:#08a34a;transform:translateY(-2px);box-shadow:0 12px 28px rgba(8,163,74,.10)}
+.vendor-global-item img{display:block;max-width:174px;max-height:72px;width:auto;height:auto;object-fit:contain}
+@keyframes vendorGlobalScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:700px){.vendor-global{padding:34px 0 42px}.vendor-global-item{width:170px;height:88px;padding:10px 14px}.vendor-global-item img{max-width:140px;max-height:58px}.vendor-global-track{gap:12px;animation-duration:34s}.vendor-global-marquee:before,.vendor-global-marquee:after{width:42px}}
+@media(prefers-reduced-motion:reduce){.vendor-global-track{animation:none}}
+
