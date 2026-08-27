@@ -684,3 +684,78 @@ body.light-green-page .course-card {
   .brand-split .brand-mark{width:34px !important;height:40px !important}
   .brand-split .brand-wordmark{width:124px !important}
 }
+
+
+/* ===== FINAL SINGLE LOGO + CONTACT GREEN FIX ===== */
+.brand-one{
+  display:flex !important;
+  align-items:center !important;
+  flex:0 0 auto !important;
+  text-decoration:none !important;
+}
+.brand-one img{
+  display:block !important;
+  width:235px !important;
+  height:auto !important;
+  max-width:235px !important;
+  object-fit:contain !important;
+}
+.reference-header .brand-one img,
+.site-header .brand-one img{
+  width:235px !important;
+  max-width:235px !important;
+  height:auto !important;
+}
+.footer .brand-one img{
+  width:235px !important;
+  max-width:235px !important;
+  height:auto !important;
+}
+
+/* No extra Meeral mark above social buttons */
+.global-social-mark{display:none !important}
+
+/* Contact Us button: green border/text, green fill on hover/active */
+.reference-contact-btn{
+  border:1.5px solid #08a34a !important;
+  color:#08a34a !important;
+  background:#fff !important;
+  border-radius:5px !important;
+  text-decoration:none !important;
+}
+.reference-contact-btn:hover,
+.reference-contact-btn.active{
+  background:#08a34a !important;
+  border-color:#08a34a !important;
+  color:#fff !important;
+}
+
+/* Nav Contact item also uses green active state */
+.reference-header .main-nav a[data-nav="contact"].active{
+  color:#08a34a !important;
+}
+
+/* Keep global social rail neat without the removed top logo */
+.global-social-rail{gap:0 !important}
+.global-social-label{margin-top:0 !important}
+
+/* Keep proper WhatsApp SVG on all pages */
+.whatsapp{
+  font-size:0 !important;
+}
+.whatsapp svg{
+  width:30px !important;
+  height:30px !important;
+  display:block !important;
+}
+
+@media(max-width:1180px){
+  .brand-one img,
+  .reference-header .brand-one img,
+  .site-header .brand-one img{width:205px !important;max-width:205px !important}
+}
+@media(max-width:640px){
+  .brand-one img,
+  .reference-header .brand-one img,
+  .site-header .brand-one img{width:175px !important;max-width:175px !important}
+}
