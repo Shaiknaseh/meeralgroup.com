@@ -3,28 +3,67 @@ function siteBase(){ return window.location.hostname.endsWith('github.io') ? `/$
 function siteUrl(path=''){ return siteBase() + String(path).replace(/^\/+/, ''); }
 
 const courses = [
- {title:'OSHA 30-Hour General Industry',category:'HSE & Safety',method:'Classroom / Online',language:'Arabic / English',duration:'4 Days',image:'assets/images/safety.jpg'},
- {title:'IOSH Managing Safely',category:'HSE & Safety',method:'Classroom / Online',language:'Arabic / English',duration:'3 Days',image:'assets/images/safety.jpg'},
- {title:'First Aid & CPR',category:'First Aid & Emergency',method:'Classroom',language:'Arabic / English',duration:'2 Days',image:'assets/images/first-aid.webp'},
- {title:'Fire Safety & Prevention',category:'Fire & Safety',method:'Classroom',language:'Arabic / English',duration:'2 Days',image:'assets/images/safety.jpg'},
- {title:'Risk Assessment & Risk Management',category:'HSE & Safety',method:'Classroom / Online',language:'Arabic / English',duration:'3 Days',image:'assets/images/safety.jpg'},
- {title:'PMP® Exam Preparation',category:'Professional Certifications',method:'Classroom / Online',language:'Arabic / English',duration:'5 Days',image:'assets/images/corporate.jpg'},
- {title:'Microsoft Power BI Data Analysis',category:'IT & Digital Skills',method:'Classroom / Online',language:'Arabic / English',duration:'4 Days',image:'assets/images/corporate.jpg'},
- {title:'Leadership & Team Management',category:'Management & Leadership',method:'Classroom / Online',language:'Arabic / English',duration:'3 Days',image:'assets/images/corporate.jpg'},
- {title:'Electrical Safety for Engineers',category:'Engineering & Technical',method:'Classroom',language:'English',duration:'3 Days',image:'assets/images/safety.jpg'},
- {title:'HR Essentials for Supervisors',category:'HR & Professional Development',method:'Classroom / Online',language:'Arabic / English',duration:'2 Days',image:'assets/images/corporate.jpg'},
- {title:'Emergency Response & Evacuation',category:'First Aid & Emergency',method:'Classroom',language:'Arabic / English',duration:'2 Days',image:'assets/images/first-aid.webp'}
+ {title:'IOSH Managing Safely',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'3 Days',fee:'PKR 35,000',image:'assets/images/safety.jpg'},
+ {title:'IOSH Working Safely',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 20,000',image:'assets/images/safety.jpg'},
+ {title:'OSHA 30-Hour General Industry',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'4 Days',fee:'PKR 32,500',image:'assets/images/safety.jpg'},
+ {title:'HSE Fundamentals',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Risk Assessment / HIRA',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 18,000',image:'assets/images/safety.jpg'},
+ {title:'JSA / JHA',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Incident Investigation & Root Cause Analysis',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 20,000',image:'assets/images/safety.jpg'},
+ {title:'Fire Safety & Prevention',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Emergency Response & Evacuation',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 15,000',image:'assets/images/first-aid.webp'},
+ {title:'First Aid & CPR',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 15,000',image:'assets/images/first-aid.webp'},
+ {title:'Work at Height Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Confined Space Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 18,000',image:'assets/images/safety.jpg'},
+ {title:'Excavation & Trenching Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Electrical Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 18,000',image:'assets/images/safety.jpg'},
+ {title:'Lifting & Rigging Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 18,000',image:'assets/images/safety.jpg'},
+ {title:'Permit to Work (PTW)',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Construction Safety',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 18,000',image:'assets/images/safety.jpg'},
+ {title:'Defensive Driving',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'Behaviour-Based Safety (BBS)',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'HSE Supervisor / HSE Officer Program',category:'HSE & Safety',method:'Classroom / Online',language:'English / Urdu',duration:'5 Days',fee:'PKR 40,000',image:'assets/images/safety.jpg'},
+ {title:'ISO 9001:2015 Quality Management – Awareness',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 9001:2015 Quality Management – Internal Auditor',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 35,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 9001:2015 Quality Management – Lead Auditor (IRCA Approved)',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'5 Days',fee:'PKR 95,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 14001:2015 Environmental Management – Awareness',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 14001:2015 Environmental Management – Internal Auditor',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 35,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 14001:2015 Environmental Management – Lead Auditor (IRCA Approved)',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'5 Days',fee:'PKR 97,000',image:'assets/images/corporate.jpg'},
+ {title:'ISO 45001:2018 Occupational Health & Safety – Awareness',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'1 Day',fee:'PKR 15,000',image:'assets/images/safety.jpg'},
+ {title:'ISO 45001:2018 Occupational Health & Safety – Internal Auditor',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 35,000',image:'assets/images/safety.jpg'},
+ {title:'ISO 45001:2018 Occupational Health & Safety – Lead Auditor (IRCA Approved)',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'5 Days',fee:'PKR 98,000',image:'assets/images/safety.jpg'},
+ {title:'Integrated ISO 9001 + ISO 14001 + ISO 45001 Awareness',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 25,000',image:'assets/images/corporate.jpg'},
+ {title:'Integrated QHSE Internal Auditor',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'3 Days',fee:'PKR 55,000',image:'assets/images/corporate.jpg'},
+ {title:'Integrated QHSE Management Systems',category:'Quality, Environment & OH&S',method:'Classroom / Online',language:'English / Urdu',duration:'3 Days',fee:'PKR 65,000',image:'assets/images/corporate.jpg'},
+ {title:'NEBOSH International General Certificate (IGC)',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'PMP® Training & Exam Preparation',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'Risk Management',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'3 Days',fee:'PKR 45,000',image:'assets/images/corporate.jpg'},
+ {title:'Project Risk Management',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 25,000',image:'assets/images/corporate.jpg'},
+ {title:'Project Planning & Scheduling',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 25,000',image:'assets/images/corporate.jpg'},
+ {title:'Primavera P6',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'4 Days',fee:'PKR 40,000',image:'assets/images/corporate.jpg'},
+ {title:'Contract Management',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'3 Days',fee:'PKR 30,000',image:'assets/images/corporate.jpg'},
+ {title:'Leadership & Supervisory Skills',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 20,000',image:'assets/images/corporate.jpg'},
+ {title:'Communication & Professional Skills',category:'Project & Professional Management',method:'Classroom / Online',language:'English / Urdu',duration:'2 Days',fee:'PKR 15,000',image:'assets/images/corporate.jpg'},
+ {title:'Power BI',category:'IT & Digital Skills',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'Advanced Power BI',category:'IT & Digital Skills',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'Data Analytics',category:'IT & Digital Skills',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'AI for Business / Professionals',category:'IT & Digital Skills',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'},
+ {title:'Advanced Excel',category:'IT & Digital Skills',method:'Classroom / Online',language:'English / Urdu',duration:'Enquire',fee:'Customized Pricing – Enquire Now',image:'assets/images/corporate.jpg'}
 ];
 
 function cardTemplate(c){
   const slug=((c.title || c.name || 'course')
     .toLowerCase()
     .replace(/&/g,' and ')
+    .replace(/®/g,'')
+    .replace(/[–—]/g,'-')
     .replace(/[^a-z0-9]+/g,'-')
     .replace(/^-|-$/g,''));
+  const feeClass=String(c.fee||'').startsWith('PKR') ? 'course-fee fixed' : 'course-fee enquire';
   return `<article class="course-card" data-category="${c.category}">
     <div class="course-image" style="background-image:url('${siteUrl(c.image)}')"><span class="badge">${c.category}</span></div>
     <div class="course-body"><h3>${c.title}</h3>
+      <div class="${feeClass}">${c.fee||''}</div>
       <div class="course-meta"><span>◷ ${c.duration}</span><span>◎ ${c.language}</span><span>▣ ${c.method}</span></div>
       <div class="course-footer"><a class="link-arrow" href="${siteUrl(`courses/${slug}/`)}">View Course →</a><button class="btn btn-primary register-trigger" data-course="${c.title}" style="padding:9px 13px;font-size:12px">Register</button></div>
     </div></article>`

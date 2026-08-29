@@ -1,0 +1,21 @@
+MEERAL GROUP COURSE CATALOG / PKR PRICING UPDATE
+
+Updated courses: 46
+
+Changes:
+- Expanded searchable course catalog using the supplied pricing poster.
+- Added PKR fee display to course cards.
+- Created individual detail pages for all listed programs.
+- Replaced SAR course fee display with PKR or Customized Pricing – Enquire Now.
+- OSHA 30-Hour General Industry is PKR 32,500.
+- IT courses and NEBOSH/PMP remain enquiry-based where the supplied poster showed customized pricing.
+- Existing unrelated site files were preserved.
+
+GitHub Desktop:
+You can replace the full repository with the full ZIP carefully, or use the update-only ZIP to copy only:
+- script.js
+- courses/
+- COURSE-PRICING-UPDATE-NOTE.txt
+
+Important:
+The update-only package intentionally does not include verification/admin/private database files.

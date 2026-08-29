@@ -1,0 +1,29 @@
+MEERAL GROUP FINAL CORPORATE WEBSITE UPDATE
+
+This version includes:
+- Final corporate homepage inspired by the approved reference layout.
+- Site-wide final navigation:
+  Home
+  About Us
+  Our Divisions
+  Certifications & Diplomas
+  Accreditation & Compliance
+  Resources / Insights
+  Contact Us
+  Request a Quote
+- Three dedicated division pages:
+  divisions/inspection/
+  divisions/qhse/
+  divisions/mitas/
+- Resources / Insights page.
+- MITAS public-site naming.
+- Existing 46-course PKR pricing catalogue retained.
+- Accreditation section deliberately states application/progress rather than claiming accreditation.
+
+2026 ACCREDITATION WORDING NOTE
+IAF and ILAC consolidated into Global Accreditation Cooperation Inc. (Global ACI) effective 1 January 2026.
+The website therefore uses UAF + Global ACI context instead of displaying an IAF MLA mark.
+No protected accreditation mark is presented as though MEERAL is already accredited.
+
+For GitHub Desktop:
+Use the update-only ZIP to replace the listed files/folders.
