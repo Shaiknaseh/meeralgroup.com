@@ -1,0 +1,19 @@
+MEERAL EXACT NAVIGATION / LIVE DEPLOYMENT
+
+The public navigation is:
+Home
+About Us
+Our Divisions
+Services
+Certifications & Diplomas
+Accreditation & Compliance
+Resources / Insights
+Verification
+Contact Us
+Request a Quote
+
+IMPORTANT:
+- GitHub navigation links Verification directly to https://meeralgroup.com/verification/
+- Do not deploy a static verification/index.html over the live PHP verification system.
+- The cPanel LIVE-FIX package contains an updated verification/index.php with the same navigation.
+- Copy the complete divisions and resources folders into /home/bekcgiqucf/meeralgroup.com/

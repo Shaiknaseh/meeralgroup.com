@@ -869,3 +869,12 @@ body.light-green-page .course-card {
  .division-dropdown-menu{width:100%!important;left:0!important}
  .about-accreditation-small{grid-template-columns:1fr}
 }
+
+/* Exact final top bar and PHP verification navigation */
+.final-topbar{background:#052f52!important}
+.final-topbar .topbar-right span{font-size:10px;color:#dbe9ef}
+.final-site-header{overflow:visible!important;position:relative;z-index:1000}
+.final-site-header .container,.final-site-header .header-row,.final-main-nav{overflow:visible!important}
+.final-main-nav{display:flex!important;align-items:center;gap:15px!important;white-space:nowrap;font-size:12px!important}
+.final-main-nav>a,.final-main-nav>.nav-dropdown>.nav-dropdown-toggle{font-weight:800}
+.final-main-nav>a.active,.final-main-nav>.nav-dropdown>.nav-dropdown-toggle.active{color:#08a34a!important}
