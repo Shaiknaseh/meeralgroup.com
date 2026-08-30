@@ -1,0 +1,12 @@
+FINAL FIX
+1. Fixed Resources / Insights styling and asset paths on GitHub Pages.
+2. Rebuilt Certifications & Diplomas as a large course mega-dropdown.
+3. Kept Services and Verification in main navigation.
+4. Removed accreditation-progress presentation from homepage.
+5. Moved accreditation progress to Accreditation & Compliance page.
+6. Rebuilt branded 404 page.
+7. Audited local HTML href/src references.
+
+For GitHub Desktop:
+Extract this ZIP, open meeralgroup.com-main, copy everything inside and replace the matching files in your repository.
+Commit and Push origin.
