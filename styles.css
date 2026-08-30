@@ -761,43 +761,6 @@ body.light-green-page .course-card {
 }
 
 
-/* ===== Final course mega dropdown ===== */
-.reference-header{overflow:visible!important}
-.reference-header .container,.header-row,.main-nav{overflow:visible!important}
-.nav-mega{position:static!important}
-.nav-mega .mega-course-menu{
-  left:50%!important;transform:translateX(-50%);
-  top:72px!important;width:min(920px,94vw)!important;
-  padding:0!important;border-radius:12px!important;
-  grid-template-columns:220px 1fr;
-  overflow:hidden;background:#fff;
-}
-.nav-mega:hover .mega-course-menu{display:grid!important}
-.mega-course-sidebar{padding:16px 12px;border-right:1px solid #e4eaee;background:#fbfdfe}
-.nav-dropdown-menu .mega-course-sidebar a{
-  display:grid!important;grid-template-columns:28px 1fr 14px;align-items:center;
-  gap:8px;padding:13px 10px!important;margin:2px 0;border-radius:8px!important;
-  font-size:12px!important;color:#102f49!important;
-}
-.mega-course-sidebar a:first-child{background:#e7f7fd!important;color:#039cd4!important}
-.mega-course-sidebar a span{font-size:17px}.mega-course-sidebar a i{font-style:normal;text-align:right;color:#0aa9dd;font-size:20px}
-.mega-course-content{padding:16px 18px 19px}
-.mega-course-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.mega-course-heading strong{font-size:14px;color:#0a3151}
-.nav-dropdown-menu .mega-course-heading>a{padding:0!important;color:#05a6df!important;font-size:11px!important}
-.mega-course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.nav-dropdown-menu .mega-course-card{display:block!important;padding:8px!important;border:1px solid #e1e8ec;border-radius:10px!important;background:#fff}
-.mega-course-card img{display:block;width:100%;height:88px;object-fit:cover;border-radius:7px;margin-bottom:8px}
-.mega-course-card span{display:block;color:#0b2134;font-size:12px;font-weight:850;line-height:1.25}
-.mega-course-card small{display:block;color:#6a7a85;font-size:10px;margin-top:4px}
-.nav-dropdown-menu .mega-course-card:hover{background:#f7fbfd!important;box-shadow:0 7px 18px rgba(15,59,77,.08)}
-@media(max-width:980px){
-  .nav-mega{position:relative!important}
-  .nav-mega .mega-course-menu{position:static!important;transform:none!important;width:100%!important;grid-template-columns:1fr!important}
-  .mega-course-content{display:none}
-  .mega-course-sidebar{border-right:0}
-}
-
 /* Accreditation progress presentation belongs on Accreditation page */
 .accreditation-progress-card{
   display:grid;grid-template-columns:1.2fr .8fr;gap:24px;padding:30px;
@@ -812,3 +775,97 @@ body.light-green-page .course-card {
 .accreditation-mark-box strong{display:block;font-size:26px;color:#6a7680}
 .accreditation-mark-box small{display:block;margin-top:10px;font-size:9px;font-weight:900;color:#102d45}
 @media(max-width:760px){.accreditation-progress-card{grid-template-columns:1fr}.accreditation-marks{grid-template-columns:1fr 1fr}}
+
+
+/* ===== FINAL NAV / HORIZONTAL MEGA MENU ===== */
+.final-site-header{overflow:visible!important;position:relative;z-index:1000}
+.final-site-header .container,.final-site-header .header-row,.final-site-header .final-main-nav{overflow:visible!important}
+.final-site-header .header-row{min-height:78px;gap:14px}
+.final-site-header .brand{flex:0 0 255px!important;width:255px!important;min-width:255px!important}
+.final-site-header .brand img{width:240px!important;max-height:62px!important;object-fit:contain}
+.final-main-nav{display:flex!important;align-items:center;gap:15px!important;white-space:nowrap;font-size:12px!important}
+.final-main-nav>a,.final-main-nav>.nav-dropdown>.nav-dropdown-toggle{padding:29px 0 25px!important;font-weight:800}
+.final-quote-btn{background:#07833d!important;color:#fff!important;border-color:#07833d!important;padding:11px 13px!important;font-size:11px!important}
+
+/* Our Divisions */
+.division-dropdown{position:relative!important}
+.division-dropdown-menu{
+  width:390px!important;left:-28px!important;top:67px!important;
+  padding:10px!important;border-radius:12px!important;
+}
+.division-dropdown-menu a{
+  display:block!important;padding:13px 14px!important;border-radius:9px!important;
+  white-space:normal!important;line-height:1.3!important;
+}
+.division-dropdown-menu a:hover{background:#f1f8f5!important}
+.division-dropdown-menu b{display:block;color:#16384f;font-size:12px}
+.division-dropdown-menu small{display:block;color:#70818b;font-size:10px;margin-top:4px;font-weight:500}
+
+/* Certifications & Diplomas mega menu - horizontal reference format */
+.nav-mega{position:static!important}
+.mega-course-menu{
+  display:none!important;
+  position:absolute!important;
+  left:50%!important;transform:translateX(-50%)!important;
+  top:78px!important;
+  width:min(1000px,92vw)!important;
+  min-height:390px!important;
+  padding:0!important;
+  grid-template-columns:230px minmax(0,1fr)!important;
+  border:1px solid #dfe7eb!important;border-radius:12px!important;
+  background:#fff!important;
+  box-shadow:0 20px 48px rgba(10,45,70,.16)!important;
+  overflow:hidden!important;
+}
+.nav-mega:hover>.mega-course-menu,
+.nav-mega:focus-within>.mega-course-menu{display:grid!important}
+.mega-course-sidebar{padding:18px 12px;background:#fbfdfe;border-right:1px solid #e2e9ed}
+.mega-course-sidebar>a{
+  display:grid!important;grid-template-columns:30px 1fr 14px!important;align-items:center!important;
+  gap:8px!important;padding:13px 10px!important;margin:3px 0!important;
+  border-radius:8px!important;white-space:normal!important;color:#1b3448!important;
+}
+.mega-course-sidebar>a.active-cat,.mega-course-sidebar>a:hover{background:#e5f6fd!important;color:#079fd5!important}
+.mega-course-sidebar span{font-size:18px}.mega-course-sidebar b{font-size:12px}.mega-course-sidebar i{font-style:normal;font-size:19px;text-align:right}
+.mega-course-main{padding:18px 20px 22px;min-width:0}
+.mega-course-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.mega-course-heading strong{font-size:15px;color:#0b3453}
+.mega-course-heading>a{padding:0!important;color:#00a4df!important;font-size:11px!important}
+.mega-course-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+.mega-course-card{
+  display:block!important;padding:8px!important;border:1px solid #dfe7eb!important;border-radius:9px!important;
+  background:#fff!important;white-space:normal!important;min-width:0!important;
+}
+.mega-course-card:hover{background:#f7fbfd!important;box-shadow:0 8px 20px rgba(12,56,81,.08)!important}
+.mega-course-card img{width:100%!important;height:115px!important;display:block!important;object-fit:cover!important;border-radius:7px!important;margin-bottom:8px!important}
+.mega-course-card span{display:block!important;color:#0b2134!important;font-size:12px!important;font-weight:850!important;line-height:1.25!important}
+.mega-course-card small{display:block!important;color:#6e808b!important;font-size:10px!important;margin-top:4px!important}
+
+/* Small accreditation progress card for About page only */
+.about-accreditation-small{
+  max-width:760px;margin:28px auto 0;padding:22px 24px;
+  border:1.5px solid #16364c;border-radius:14px;background:#fff;
+  display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:center;
+}
+.about-accreditation-small h3{margin:5px 0 8px;color:#0a3150;font-size:21px;line-height:1.15}
+.about-accreditation-small p{margin:0;color:#58707f;font-size:12px;line-height:1.6}
+.about-accreditation-small .tag{color:#07833d;font-size:9px;font-weight:900;letter-spacing:.11em}
+.about-accreditation-small .marks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.about-accreditation-small .mark{border:1px solid #d7e1e6;border-radius:9px;text-align:center;padding:13px 6px;color:#667682}
+.about-accreditation-small .mark strong{display:block;font-size:20px}
+.about-accreditation-small .mark small{display:block;font-size:7px;font-weight:900;color:#1a3447;margin-top:6px}
+
+@media(max-width:1250px){
+ .final-main-nav{gap:10px!important;font-size:10.5px!important}
+ .final-site-header .brand{flex-basis:210px!important;width:210px!important;min-width:210px!important}
+ .final-site-header .brand img{width:198px!important}
+}
+@media(max-width:980px){
+ .final-site-header .brand{flex:1 1 auto!important;width:auto!important;min-width:0!important}
+ .final-main-nav{font-size:13px!important;white-space:normal}
+ .nav-mega{position:relative!important}
+ .mega-course-menu{position:static!important;transform:none!important;width:100%!important;min-height:0!important;grid-template-columns:1fr!important}
+ .mega-course-main{display:none!important}
+ .division-dropdown-menu{width:100%!important;left:0!important}
+ .about-accreditation-small{grid-template-columns:1fr}
+}

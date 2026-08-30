@@ -65,7 +65,7 @@ function cardTemplate(c){
     <div class="course-body"><h3>${c.title}</h3>
       <div class="${feeClass}">${c.fee||''}</div>
       <div class="course-meta"><span>◷ ${c.duration}</span><span>◎ ${c.language}</span><span>▣ ${c.method}</span></div>
-      <div class="course-footer"><a class="link-arrow" href="${siteUrl(`courses/${slug}/`)}">View Course →</a><button class="btn btn-primary register-trigger" data-course="${c.title}" style="padding:9px 13px;font-size:12px">Register</button></div>
+      <div class="course-footer"><a class="link-arrow" href="${siteUrl(`courses/${slug}/`)}">View Course →</a><a class="btn btn-primary" href="mailto:info@meeralgroup.com?subject=Course%20Registration%20Enquiry%20-%20${encodeURIComponent(c.title)}&body=${encodeURIComponent(`Hello Meeral Group,\n\nI would like to register/enquire for:\nCourse: ${c.title}\n\nName:\nPhone / WhatsApp:\nPreferred training mode:\nPreferred date:\n\nThank you.`)}" style="padding:9px 13px;font-size:12px">Register</a></div>
     </div></article>`
 }
 function renderCourses(list=courses){

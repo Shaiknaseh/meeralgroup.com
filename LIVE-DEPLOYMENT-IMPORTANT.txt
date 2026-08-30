@@ -1,0 +1,43 @@
+MEERAL FINAL LIVE DEPLOYMENT
+
+IMPORTANT: your current cPanel cron copy command must include the two NEW folders:
+  /home/bekcgiqucf/github-meeralgroup/divisions
+  /home/bekcgiqucf/github-meeralgroup/resources
+
+If your cron currently contains a list like:
+  ... /courses /gallery /profile /services /verification /home/.../meeralgroup.com/
+
+change that section so it also includes:
+  /divisions /resources
+
+Example relevant cp portion:
+  /bin/cp -Rf \
+  /home/bekcgiqucf/github-meeralgroup/about \
+  /home/bekcgiqucf/github-meeralgroup/accreditations \
+  /home/bekcgiqucf/github-meeralgroup/assets \
+  /home/bekcgiqucf/github-meeralgroup/contact \
+  /home/bekcgiqucf/github-meeralgroup/corporate-training \
+  /home/bekcgiqucf/github-meeralgroup/courses \
+  /home/bekcgiqucf/github-meeralgroup/divisions \
+  /home/bekcgiqucf/github-meeralgroup/gallery \
+  /home/bekcgiqucf/github-meeralgroup/profile \
+  /home/bekcgiqucf/github-meeralgroup/resources \
+  /home/bekcgiqucf/github-meeralgroup/services \
+  /home/bekcgiqucf/github-meeralgroup/verification \
+  /home/bekcgiqucf/meeralgroup.com/
+
+WITHOUT divisions + resources in the cron, these LIVE URLs will keep returning 404 even though GitHub contains the files:
+  https://meeralgroup.com/divisions/qhse/
+  https://meeralgroup.com/divisions/mitas/
+  https://meeralgroup.com/divisions/inspection/
+  https://meeralgroup.com/resources/
+
+VERIFICATION:
+Static GitHub verification now redirects to:
+  https://meeralgroup.com/verification/
+so the PHP/MySQL verification database remains the source of truth.
+
+REGISTRATION:
+Register buttons open a pre-addressed email to:
+  info@meeralgroup.com
+The visitor must press Send in their email app. A static GitHub site cannot securely send email automatically without a backend or form service.
